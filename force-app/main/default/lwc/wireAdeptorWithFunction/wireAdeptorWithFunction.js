@@ -8,7 +8,8 @@ const columns = [
   { label: "AnnualRevenue", fieldName: "AnnualRevenue", type: "currency" }
 ];
 export default class WireAdeptorWithFunction extends LightningElement {
-  accounts;
+  myDetails;
+  accounts = [];
   errors;
   columns = columns;
   //Wire Adeptor with Function
