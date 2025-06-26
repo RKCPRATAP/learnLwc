@@ -1,0 +1,19 @@
+<template>
+  <lightning-card
+    title="Conditional Rendering Example"
+    icon-name="custom:custom63"
+  >
+    <template if:true={isVisible}>
+      <p>
+        This content is conditionally rendered based on the value of isVisible.
+      </p>
+    </template>
+    <template if:false={isVisible}>
+      <p>This content is displayed when isVisible is false.</p>
+    </template>
+    <lightning-button
+      label="Toggle Visibility"
+      onclick={toggleVisibility}
+    ></lightning-button>
+  </lightning-card>
+</template>

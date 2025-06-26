@@ -1,0 +1,10 @@
+<template>
+  <lightning-card title="Rendering Demo">
+    <template for:each={arrayList} for:item="item">
+      <p key={item} class="slds-p-horizontal_small">{item}</p>
+    </template>
+    <template for:each={items} for:item="item">
+      <p key={item.id} class="slds-p-horizontal_small">{item.id} {item.name}</p>
+    </template>
+  </lightning-card>
+</template>

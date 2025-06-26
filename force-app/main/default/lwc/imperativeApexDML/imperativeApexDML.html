@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="Update Record using imperative ">
+    <div class="slds-var-p-around_small">
+      <lightning-input
+        read-only="true"
+        label="Account Name"
+        value={accname}
+      ></lightning-input>
+      <lightning-input
+        label="Tikker Symbol"
+        value={acctiker}
+        onchange={handleChange}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-button
+        variant="brand"
+        label="Update Record"
+        onclick={updateTiker}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

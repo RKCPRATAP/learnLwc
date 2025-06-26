@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="Record Form Demo - View the Record">
+    <lightning-record-form
+      object-api-name={objectApiName}
+      columns="2"
+      fields={feilds}
+      record-id={recordId}
+      onsuccess={navigateToRecordPage}
+      mode="view"
+      density="comfy"
+    >
+    </lightning-record-form>
+  </lightning-card>
+</template>

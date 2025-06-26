@@ -1,0 +1,44 @@
+<template>
+  <lightning-card title="Joint String">
+    <div class="slds-var-p-around_small">
+      <lightning-input
+        type="text"
+        label="First String"
+        name="firstString"
+        value={firstString}
+        onchange={handleNumberChange}
+        class="slds-m-bottom_small"
+        placeholder="Enter First String"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-input
+        type="text"
+        label="Second String"
+        name="secondString"
+        value={secondString}
+        onchange={handleNumberChange}
+        class="slds-m-bottom_small"
+        placeholder="Enter Second String"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-button
+        variant="brand"
+        label="Join Strings"
+        title="Join Strings"
+        onclick={handleJoinStrings}
+        class="slds-m-bottom_small"
+      ></lightning-button>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-textarea
+        label="Joined String"
+        value={joinedString}
+        class="slds-m-bottom_small"
+        readonly
+        placeholder="Joined String will appear here"
+      ></lightning-textarea>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,74 @@
+<template>
+  <lightning-card title="Create Account" icon-name="custome:custom14">
+    <div class="slds-var-p-around_small">
+      <lightning-combobox
+        name="parentacc"
+        label="Parent Account"
+        placeholder="Select Parent Account"
+        options={parentoptions}
+        onchange={handleChange}
+        required="true"
+        message-when-value-missing="Please select a parent account"
+        class="validateme"
+      ></lightning-combobox>
+
+      <lightning-input
+        type="text"
+        name="accname"
+        label="Account Name"
+        placeholder="Enter Account Name"
+        onchange={handleChange}
+        required="true"
+        message-when-value-missing="Please Enter Account Name"
+        min-length="3"
+        max-length="30"
+        message-when-too-short="Please Enter atleast 3 Characters"
+        message-when-too-long="Please Enter atmost 30 Characters"
+        pattern="[A-Za-z]*"
+        message-when-pattern-mismatch="Only Characters are Allowed"
+        field-level-help="Only Characters are Allowed"
+        class="validateme"
+      ></lightning-input>
+
+      <lightning-input
+        type="date"
+        name="slaexpdt"
+        label="SLA Expiration Date"
+        onchange={handleChange}
+      >
+      </lightning-input>
+      <template lwc:if={slapicklist.data}>
+        <lightning-radio-group
+          name="slatype"
+          label="SLA Type"
+          onchange={handleChange}
+          options={slapicklist.data.values}
+          type="button"
+        ></lightning-radio-group>
+      </template>
+      <lightning-slider
+        label="Number Of Locations"
+        min="1"
+        max="50"
+        step="1"
+        value={selnoOfLocations}
+        onchange={handleChange}
+        name="numberoflocations"
+      ></lightning-slider>
+      <lightning-input-rich-text
+        label="Description"
+        name="description"
+        placeholder="Enter Description Here"
+        disabled-categories="FORMAT_FONT, FORMAT_HORIZONTAL_RULE, FORMAT_INDENT, FORMAT_INSERT_COMMENT, FORMAT_INSERT"
+        onchange={handleChange}
+      ></lightning-input-rich-text>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-button
+        variant="brand"
+        label="Save"
+        onclick={saveRecord}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

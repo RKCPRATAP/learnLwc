@@ -1,0 +1,22 @@
+<template>
+  <lightning-card title="Practical">
+    <div class="slds-var-p-around_small">
+      <lightning-input
+        type="checkbox"
+        label="Show Message"
+        onchange={handleChange}
+        name="input1"
+      ></lightning-input>
+      <template lwc:if={isVisible}>
+        <p class="slds-text-body_regular">
+          This is a message that can be toggled.
+        </p>
+      </template>
+      <template lwc:else>
+        <p class="slds-text-body_regular">
+          The message is hidden. Toggle the checkbox to show it.
+        </p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

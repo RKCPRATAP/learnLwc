@@ -1,0 +1,32 @@
+<template>
+  <lightning-card title="Impeartive Call">
+    <div class="slds-var-p-around_small">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+          <lightning-button
+            variant="brand"
+            label="Call Account"
+            class="slds-m-left_x-small"
+            onclick={handleClick}
+          ></lightning-button>
+        </div>
+        <div class="slds-col">
+          <template lwc:if={industryPicklist.data}>
+            <lightning-combobox
+              label="Industry"
+              placeholder="Select Industry"
+              options={industryPicklist.data.values}
+              onchange={handleChange}
+            ></lightning-combobox>
+          </template>
+        </div>
+      </div>
+
+      <lightning-datatable
+        key-field="id"
+        data={data}
+        columns={columns}
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+<template>
+  <lightning-card title="Dynamic CSS Example">
+    <div class="slds-var-p-around_small">
+      <p class={pElement}>This Line is For Dynamic Css</p>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-button
+        variant="brand"
+        label="Add Css"
+        onclick={addHandler}
+        class="slds-var-p-around_small"
+      ></lightning-button>
+      <lightning-button
+        variant="brand"
+        label="Remove Css"
+        onclick={removeHandler}
+        class="slds-var-p-around_small"
+      ></lightning-button>
+      <lightning-button
+        variant="brand"
+        label="Toggle Css"
+        onclick={toggleHandler}
+        class="slds-var-p-around_small"
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+  <lightning-card
+    title="Parent Component with Hook"
+    icon-name="custom:custom63"
+  >
+    <div class="slds-p-horizontal_medium">
+      <p>Parent Component with Hook</p>
+      <p>Counter Value: {counterValue}</p>
+      <lightning-input
+        type="checkbox"
+        label="Toggle Counter"
+        onchange={handleToggleCounter}
+      ></lightning-input>
+    </div>
+    <template lwc:if={displayChild}>
+      <c-child-hook counter-value={counterValue}></c-child-hook>
+    </template>
+  </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Wire Adeptor With Function">
+    <template if:true={accounts}>
+      <lightning-datatable
+        key-field="id"
+        data={accounts}
+        columns={columns}
+      ></lightning-datatable>
+    </template>
+  </lightning-card>
+</template>
