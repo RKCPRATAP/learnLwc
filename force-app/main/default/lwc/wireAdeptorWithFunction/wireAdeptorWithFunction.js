@@ -9,6 +9,7 @@ const columns = [
 ];
 export default class WireAdeptorWithFunction extends LightningElement {
   myDetails;
+  anotherProperty = "Another Property";
   accounts = [];
   errors;
   columns = columns;
