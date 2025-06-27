@@ -1,6 +1,6 @@
 import { LightningElement, wire } from "lwc";
 import getAccounts from "@salesforce/apex/AccountHelper.getAccounts";
-import Rating from "@salesforce/schema/Account.Rating";
+
 const columns = [
   { label: "Account Name", fieldName: "Name" },
   { label: "Phone", fieldName: "Phone", type: "phone" },
@@ -10,6 +10,7 @@ const columns = [
 export default class WireAdeptorWithFunction extends LightningElement {
   myDetails;
   anotherProperty = "Another Property";
+  oneMore;
   accounts = [];
   errors;
   columns = columns;
